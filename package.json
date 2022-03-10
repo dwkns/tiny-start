@@ -1,0 +1,46 @@
+{
+  "name": "full-start",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "2.0.0-canary.2",
+    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "alpinejs": "^3.4.2",
+    "autoprefixer": "^10.4.2",
+    "cheerio": "^1.0.0-rc.10",
+    "cssnano": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "esbuild": "^0.14.22",
+    "html-minifier": "^4.0.0",
+    "js-cookie": "^3.0.1",
+    "lodash": "^4.17.21",
+    "luxon": "^2.0.2",
+    "netlify-cli": "^8.4.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^3.0.23",
+    "tailwindcss-debug-screens": "^2.2.1"
+  },
+  "env": {
+    "node": true
+  },
+  "scripts": {
+    "clean": "rimraf dist build",
+    "start": "npm-run-all clean -p dev:* ",
+    "dev": "npm-run-all clean -s dev:* ",
+    "dev:postcss": "TAILWIND_MODE=watch NODE_ENV=development postcss ./src/styles/main.css -o ./src/styles/compiled.css --watch",
+    "dev:esbuild": "NODE_ENV=development esbuild src/scripts/main.js --bundle --watch --outfile=dist/scripts/main.js",
+    "dev:eleventy": "NODE_ENV=development eleventy --serve --quiet",
+    "build": "npm-run-all clean -s build:*",
+    "build:postcss": "TAILWIND_MODE=build NODE_ENV=production postcss ./src/styles/main.css -o ./src/styles/compiled.css",
+    "build:esbuild": "esbuild src/scripts/main.js --bundle --minify --sourcemap --outfile=dist/scripts/main.js",
+    "build:eleventy": "NODE_ENV=production eleventy",
+    "serve": "NODE_ENV=production npm-run-all clean -p build:* serve-static",
+    "serve-static": "npx serve dist"
+  },
+  "author": "dazza"
+}

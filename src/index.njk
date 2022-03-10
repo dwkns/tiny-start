@@ -1,0 +1,21 @@
+---
+title: Page title
+layout: _regular_page.njk
+metadata:
+  title: Page title for the HEAD and OG
+  description: The page description 
+  og_image:
+noindex: 
+sitemap:
+---
+<section class="mx-auto mt-12 max-w-screen-3xl px-u2-pad">
+  <h1  class="text-5xl font-thin">This starter uses a variable font</h1>
+  <p  class="text-4xl font-bold">This allows</p>
+  <p  class="text-lg font-medium">Multiple weights</p>
+  <p  class="text-sm font-regular">In a single file</p>
+  <p  class="text-sm font-black">And helps optimise the download</p>
+</section>
+<section class="mx-auto mt-12 max-w-screen-3xl px-u2-pad">
+  {% from "_components/fancy-block/_macro.njk" import fancyBlock with context %}
+  {{ fancyBlock( {title:"Fancy title"} )}}
+</section>

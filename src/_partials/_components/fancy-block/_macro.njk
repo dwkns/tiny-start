@@ -1,0 +1,38 @@
+{% macro fancyBlock(params) %}
+  <div class="grid grid-cols-12 gap-12">
+    <div class="col-span-12 gap-12 lg:grid lg:grid-cols-12 md:col-span-6 lg:col-span-12">
+
+    {# {{ id: 'fgfg', cardTitle: params.title, firstElement: true}}  #}
+      {{ card(  { id: 'fgfg', cardTitle: params.title, firstElement: true}   ) }}
+    </div>
+    <div class="col-span-12 md:col-span-6 lg:col-span-4">
+      {{ card( { id: 'fgfg', cardTitle: params.title} ) }}
+    </div>
+    <div class="col-span-12 md:col-span-6 lg:col-span-4">
+      {{ card( { id: 'fgfg', cardTitle: 'Not passed in'} ) }}
+    </div>
+    <div class="col-span-12 md:col-span-6 lg:col-span-4">
+      {{ card( { id: 'fgfg', cardTitle: params.title} ) }}
+    </div>
+    <div class="col-span-12 md:col-span-6 lg:col-span-4">
+      {{ card( { id: 'fgfg', cardTitle: params.title} ) }}
+    </div>
+    <div class="col-span-12 md:col-span-6 lg:col-span-4">
+      {{ card( { id: 'fgfg', cardTitle: params.title} ) }}
+    </div>
+    <div class="col-span-12 md:col-span-6 lg:col-span-4">
+      {{ card( { id: 'fgfg', cardTitle: params.title} ) }}
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro card(params) %}
+  <div class="col-span-8 bg-blue-100 {{ 'h-56 lg:h-96' if params.firstElement else 'h-56' }}"></div>
+  <div class="col-span-4">
+    <p class="text-xl ">{{params.cardTitle}}</p>
+    <a href="#" class="">
+      <p class="text-sm text-brand hover:underline">some-link</p>
+    </a>
+  </div>
+{% endmacro %}
+
