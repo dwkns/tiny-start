@@ -15,5 +15,7 @@
     "dwkns"
   ],
   "author": "dwkns",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {"highlight.js": "^11.5.1"}
 }
+

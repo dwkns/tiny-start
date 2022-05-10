@@ -16,5 +16,5 @@ sitemap:
   {% from "_components/simple-block/_macro.njk" import simpleBlock with context %}
   {{ simpleBlock( {title:"But this comes from a Macro"} )}}
 
-  {{ "sdsds" | console | safe }}
+  {{ page | console | safe }}
 </section>
