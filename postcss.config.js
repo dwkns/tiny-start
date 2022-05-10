@@ -2,7 +2,7 @@
 const tailwindcss = require('tailwindcss') 
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
-const  site  = require('./src/_data/site.js') // import our site data
+const site  = require('./src/_data/site.js') // import our site data
 
 const minifyCSS = site[site.currentEnv].minifyCSS
 

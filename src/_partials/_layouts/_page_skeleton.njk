@@ -6,15 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#317EFB"/>
-    {% include "_includes/_fonts.njk" %}
-    {% include "_includes/_css.njk" %}
-    {% include "_includes/_seo.njk" %}
-    {% include "_includes/_open_graph.njk" %}
-    {% include "_includes/_icons.njk" %}
+   <link rel="preload" href="/fonts/IBMPlexSans.var.latin-subset.woff2" as="font" type="font/woff2" crossorigin> 
+    <link rel="stylesheet" href="/styles/compiled.css">
     <script defer src="/scripts/main.js"></script>
   </head>
   <body class="{{ 'debug-screens' if site[site.currentEnv].debug }}">
-   {%- include "_includes/_cookie-banner.njk" -%}
    {{ content | safe }}
   </body>
 </html>

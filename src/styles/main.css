@@ -11,12 +11,8 @@
   unicode-range: U+000-5FF;
 }
 
-
 @tailwind utilities;
 
-[x-cloak] {
-    display: none !important;
-  }
 
 :root {
     --brand: rgb(11, 134, 235);
