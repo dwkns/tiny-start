@@ -1,6 +1,4 @@
-const { logToConsole } = require("./dwkns-11ty-plugins"); // need to be on NPM really
-
-
+const { logToConsole } = require('dwkns-11ty-plugins');
 
 module.exports = (eleventyConfig) => {
   // utility function to log value to HTML
