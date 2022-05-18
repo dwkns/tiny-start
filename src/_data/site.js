@@ -15,6 +15,9 @@ let site = {
     postalCode: "default_postalCode",
     addressCountry: "default_addressCountry"
   },
+  theme: {
+   colour: '#317EFB'
+  },
   twitterURL: "https://twitter.com/yourTwitter",
   linkedInURL: "https://www.linkedin.com/company/yourCompany/",
   author: {

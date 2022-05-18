@@ -4,17 +4,72 @@ layout: _regular_page.njk
 metadata:
   title: Page title for the HEAD and OG
   description: The page description 
-  og_image:
+og_image:
 noindex: 
 sitemap:
 ---
-<section class="p-12">
-  <h1  class="text-2xl ">Not a lot here yet</h1>
+<section class="py-12">
+  <div class="dwkns-container">
+    <h1  class="text-2xl ">Not a lot here</h1>
+  </div>
+
+
+
+
+<section class="pt-12">
+  <div class="dwkns-container">
+
+    {% from "_components/simple-block/_macro.njk" import simpleBlock with context %}
+    {{ simpleBlock( {title:"But this comes from a Macro"} )}} 
+
+    {{ page | console | safe }}
+  </div>
 </section>
 
-<section class="px-12">
-  {% from "_components/simple-block/_macro.njk" import simpleBlock with context %}
-  {{ simpleBlock( {title:"But this comes from a Macro"} )}}
+<section class="dwkns-container dwkns-grid">
+  <div class="flex flex-row items-center justify-center col-span-12 bg-cyan-600">
+    <p>The Grid</p>
+  </div>
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+    <p>1</p>
+  </div>
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+    <p>2</p>
+  </div>
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+    <p>3</p>
+  </div>
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+    <p>4</p>
+  </div>
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+    <p>5</p>
+  </div>
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+    <p>6</p>
+  </div>
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+    <p>7</p>
+  </div>
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+    <p>8</p>
+  </div>
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+    <p>9</p>
+  </div>
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+    <p>10</p>
+  </div>
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+    <p>11</p>
+  </div>
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+    <p>12</p>
+  </div>
+</section>
 
-  {{ page | console | safe }}
+<section class="px-4 mx-auto sm:px-0 max-w-125% mt-4  bg-lime-200">
+  <div class="flex flex-row items-center justify-center col-span-12 py-1">
+    <p>125% of 1280px</p>
+  </div>
 </section>
