@@ -1,9 +1,11 @@
-const { logToConsole } = require('dwkns-eleventy-plugins')
+const { logToConsole, addAnOrA } = require('dwkns-eleventy-plugins')
 
 module.exports = (eleventyConfig) => {
   // utility function to log value to HTML
   // use {{ thingToLog | console | safe }}
-   eleventyConfig.addPlugin(logToConsole);
+    eleventyConfig.addPlugin(logToConsole);
+   
+   eleventyConfig.addPlugin(addAnOrA);
 
   
   // detect changes in the output folder and reload browser
