@@ -4,13 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@11ty/eleventy": "2.0.0-canary.9",
+    "@11ty/eleventy": "2.0.0-canary.11",
     "@tailwindcss/forms": "^0.5.1",
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.7",
     "cssnano": "^5.1.7",
     "dotenv": "^16.0.1",
-    "dwkns-eleventy-plugins": "^0.0.2",
     "esbuild": "^0.14.38",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.13",
@@ -36,5 +35,13 @@
     "serve": "NODE_ENV=production npm-run-all clean -p build:* serve-static",
     "serve-static": "npx serve dist"
   },
-  "author": "dazza"
+  "author": "dazza",
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "es6": true
+    }
+  }
 }
