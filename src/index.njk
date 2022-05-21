@@ -8,28 +8,19 @@ og_image:
 noindex: 
 sitemap:
 ---
+{%- from "_components/components.njk" import component -%}
+{# Import all components  optional: ignore missing #}
 <section class="py-12">
   <div class="dwkns-container">
-    <h1  class="text-2xl ">Not a lot here</h1>
-  </div>
-
-
-
-
-<section class="pt-12">
-  <div class="dwkns-container">
-
-    {% from "_components/simple-block/_macro.njk" import simpleBlock with context %}
-    {{ simpleBlock( {title:"But this comes from a Macro"} )}} 
-
-    {{ page | console | safe }}
+    <h1  class="text-2xl ">Just at title</h1>
+    {{ component('simple-block', {
+        title: 'From the Simple Block'
+      })
+    }}
   </div>
 </section>
 
 <section class="dwkns-container dwkns-grid">
-  <div class="flex flex-row items-center justify-center col-span-12 bg-cyan-600">
-    <p>The Grid</p>
-  </div>
   <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
     <p>1</p>
   </div>
@@ -68,8 +59,11 @@ sitemap:
   </div>
 </section>
 
-<section class="px-4 mx-auto sm:px-0 max-w-125% mt-4  bg-lime-200">
-  <div class="flex flex-row items-center justify-center col-span-12 py-1">
+<section class="">
+  <div class="mt-4 mx-auto flex flex-row items-center justify-center py-1.5 max-w-100% bg-lime-200">
+    <p>100%% of 1280px</p>
+  </div>
+  <div class="mt-4 mx-auto flex flex-row items-center justify-center py-1.5 max-w-125% bg-lime-200">
     <p>125% of 1280px</p>
   </div>
 </section>
