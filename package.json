@@ -5,22 +5,19 @@
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "2.0.0-canary.11",
+    "tailwindcss": "^3.0.24",
     "@tailwindcss/forms": "^0.5.1",
     "@tailwindcss/typography": "^0.5.2",
+    "tailwindcss-debug-screens": "^2.2.1",
     "autoprefixer": "^10.4.7",
     "cssnano": "^5.1.7",
     "dotenv": "^16.0.1",
-    "dwkns-eleventy-plugins": "^0.0.3",
+    "dwkns-eleventy-plugins": "*",
     "esbuild": "^0.14.38",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.13",
     "postcss-cli": "^9.1.0",
-    "rimraf": "^3.0.2",
-    "tailwindcss": "^3.0.24",
-    "tailwindcss-debug-screens": "^2.2.1"
-  },
-  "env": {
-    "node": true
+    "rimraf": "^3.0.2"
   },
   "scripts": {
     "clean": "rimraf dist build",
@@ -42,7 +39,8 @@
       "ecmaVersion": 2017
     },
     "env": {
-      "es6": true
+      "es6": true,
+      "node": true
     }
   }
 }
