@@ -1,4 +1,6 @@
 const tailwindTheme = require('tailwindcss/defaultTheme');
+const tailwindTypography =  require('@tailwindcss/typography');
+const tailwindForms = require('@tailwindcss/forms')
 const debugScreens = require('tailwindcss-debug-screens');
 
 let minWidth = 320
@@ -24,7 +26,9 @@ module.exports = {
     extend: {
 
       width: {
-        '93%': `clamp(${minWidth}px, ${contentWidth}vw, ${maxWidth}px)`
+        '93%': `clamp(${minWidth}px, ${contentWidth}vw, ${maxWidth}px)`,
+        '100%': `${maxWidth}px`,
+        '125%': `${maxWidth * 1.25}px`,
       },
       spacing: {
       },
@@ -48,5 +52,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [debugScreens],
+  plugins: [debugScreens,tailwindForms, tailwindTypography],
 }

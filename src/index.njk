@@ -10,60 +10,89 @@ sitemap:
 ---
 {%- from "_components/components.njk" import component -%}
 {# Import all components  optional: ignore missing #}
-<section class="py-12">
+<section class="dwkns-mt">
   <div class="dwkns-container">
-    <h1  class="text-2xl ">Just at title</h1>
+    <h1  class="text-4xl ">Just a title</h1>
     {{ component('simple-block', {
         title: 'From the Simple Block'
       })
     }}
+
+
   </div>
 </section>
 
-<section class="dwkns-container dwkns-grid">
-  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+{# <section class="dwkns-container dwkns-grid dwkns-mt">
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-blue-300 ">
     <p>1</p>
   </div>
-  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-blue-300 ">
     <p>2</p>
   </div>
-  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-blue-300 ">
     <p>3</p>
   </div>
-  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-blue-300 ">
     <p>4</p>
   </div>
-  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-blue-300 ">
     <p>5</p>
   </div>
-  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-blue-300 ">
     <p>6</p>
   </div>
-  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-blue-300 ">
     <p>7</p>
   </div>
-  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-blue-300 ">
     <p>8</p>
   </div>
-  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-blue-300 ">
     <p>9</p>
   </div>
-  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-blue-300 ">
     <p>10</p>
   </div>
-  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-blue-300 ">
     <p>11</p>
   </div>
-  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-lime-200 ">
+  <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-blue-300 ">
     <p>12</p>
   </div>
 </section>
 
-<section class="">
-  <div class="mt-4 mx-auto flex flex-row items-center justify-center py-1.5 max-w-100% bg-lime-200">
+<section class="dwkns-mt max-w-125% mx-auto dwkns-grid mt-4">
+  <div class="col-span-12  bg-blue-300 h-48"></div>
+</section>
+
+
+<section class="dwkns-container dwkns-mt dwkns-grid mt-4">
+  <div class="col-span-6 lg:col-span-3 bg-blue-300 h-48"></div>
+  <div class="col-span-6 lg:col-span-3 bg-blue-300 h-48"></div>
+  <div class="col-span-6 lg:col-span-3 bg-blue-300 h-48"></div>
+  <div class="col-span-6 lg:col-span-3 bg-blue-300 h-48"></div>
+
+  <div class="col-span-12  bg-blue-300 h-48"></div>
+
+  <div class="col-span-12 sm:col-span-6  bg-blue-300 h-48"></div>
+  <div class="col-span-12 sm:col-span-6  bg-blue-300 h-48"></div>
+
+  <div class="col-span-12 lg:col-span-4 bg-blue-300 h-48"></div>
+  <div class="col-span-12 lg:col-span-4 bg-blue-300 h-48"></div>
+  <div class="col-span-12 lg:col-span-4 bg-blue-300 h-48"></div>
+
+  <div class="col-span-12 sm:col-span-6 lg:col-span-3 bg-blue-300 h-48"></div>
+  <div class="col-span-12 sm:col-span-6 lg:col-span-3 bg-blue-300 h-48"></div>
+  <div class="col-span-12 sm:col-span-6 lg:col-span-3 bg-blue-300 h-48"></div>
+  <div class="col-span-12 sm:col-span-6 lg:col-span-3 bg-blue-300 h-48"></div>
+
+</section> #}
+
+<section class="dwkns-mt">
+  <div class="mt-4 mx-auto flex flex-row items-center justify-center py-1.5 max-w-100% bg-blue-300">
     <p>100%% of 1280px</p>
   </div>
-  <div class="mt-4 mx-auto flex flex-row items-center justify-center py-1.5 max-w-125% bg-lime-200">
+  <div class="mt-4 mx-auto flex flex-row items-center justify-center py-1.5 max-w-125% bg-blue-300">
     <p>125% of 1280px</p>
   </div>
 </section>
