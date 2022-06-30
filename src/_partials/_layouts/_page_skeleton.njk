@@ -6,11 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="{{site.theme.colour}}"/>
-   <link rel="preload" href="/fonts/IBMPlexSans.var.latin-subset.woff2" as="font" type="font/woff2" crossorigin> 
+    <meta name="generator" content="{{ eleventy.generator }}">
+
+    <link rel="preload" href="/fonts/IBMPlexSans.var.latin-subset.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/styles/compiled.css">
-    <script defer src="/scripts/main.js"></script>
+    {# <script defer src="/scripts/main.js"></script> #}
+
   </head>
   <body class="{{ 'debug-screens' if site[site.currentEnv].debug }}">
-   {{ content | safe }}
+    {{ content | safe }}
+
+    <p class="">totalTimeSinceStart: <input id="totalTimeSinceStart" size="6" readonly=""/>ms</p>
+    <p class="">totalTimeOnPage: <input id="totalTimeOnPage" size="6" readonly=""/>ms</p>
+    <p class="">last gap: <input id="lastGap" size="6" readonly=""/>ms</p>
+    <p class="">totalTimeOffPageElement: <input id="totalTimeOffPage" size="6" readonly=""/>ms</p>
+
+    <script>
+
+      var totalTimeSinceStartElement = document.getElementById("totalTimeSinceStart");
+      var lastGapElement = document.getElementById("lastGap");
+      var totalTimeOffPageElement = document.getElementById("totalTimeOffPage");
+      var totalTimeOnPageElement = document.getElementById("totalTimeOnPage");
+
+      let startTime = performance.now();
+      let totalTimeOffPage = 0
+      let totalTimeSinceStart = 0
+
+      document.addEventListener("visibilitychange", event => {
+        if (document.visibilityState === "visible") {
+          performance.mark("gainedFocus"); // mark when the tab becomes visible
+
+          // measure time since last lostFocus event
+          let timeOffPage = performance
+            .measure("timeOffPage betwee:", "lostFocus", "gainedFocus")
+            .duration
+
+          // increment the totalTimeOffPage counter
+          totalTimeOffPage += timeOffPage
+
+          lastGapElement.value = Math.round(timeOffPage)
+          totalTimeOffPageElement.value = Math.round(totalTimeOffPage)
+
+        } else {
+          performance.mark("lostFocus"); // mark when the tab is not visible
+        }
+      })
+
+      requestAnimationFrame(function updateTimeSpent() {
+        totalTimeSinceStart = performance.now() - startTime
+        totalTimeOnPage = totalTimeSinceStart - totalTimeOffPage
+
+        totalTimeSinceStartElement.value = Math.round(totalTimeSinceStart) // update the UI
+        totalTimeOnPageElement.value = Math.round(totalTimeOnPage) // update the UI
+
+        requestAnimationFrame(updateTimeSpent);
+      });
+
+      const sendBeacon = () => {
+         totalTimeSinceStart = performance.now() - startTime
+        totalTimeOnPage = totalTimeSinceStart - totalTimeOffPage
+      }
+
+      // const beforeunload = function () {
+      //   totalTimeSinceStart = performance.now() - startTime
+      //   totalTimeOnPage = totalTimeSinceStart - totalTimeOffPage
+      //   // totalTimeOnPage is the time on Page
+      // };
+    </script>
   </body>
 </html>

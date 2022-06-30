@@ -1176,6 +1176,10 @@ select {
   unicode-range: U+000-5FF;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .absolute {
   position: absolute;
 }
