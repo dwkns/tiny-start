@@ -8,7 +8,7 @@ og_image:
 noindex: 
 sitemap:
 ---
-{%- from "_components/components.njk" import component -%}
+{%- from "_njk_components/components.njk" import component -%}
 {# Import all components  optional: ignore missing #}
 <section class="dwkns-mt">
   <div class="dwkns-container">
@@ -17,12 +17,10 @@ sitemap:
         title: 'From the Simple Block'
       })
     }}
-
-
   </div>
 </section>
 
-{# <section class="dwkns-container dwkns-grid dwkns-mt">
+<section class="dwkns-container dwkns-grid dwkns-mt">
   <div class="flex flex-row items-center justify-center col-span-1 py-1 bg-blue-300 ">
     <p>1</p>
   </div>
@@ -86,7 +84,7 @@ sitemap:
   <div class="col-span-12 sm:col-span-6 lg:col-span-3 bg-blue-300 h-48"></div>
   <div class="col-span-12 sm:col-span-6 lg:col-span-3 bg-blue-300 h-48"></div>
 
-</section> #}
+</section>
 
 <section class="dwkns-mt">
   <div class="mt-4 mx-auto flex flex-row items-center justify-center py-1.5 max-w-100% bg-blue-300">

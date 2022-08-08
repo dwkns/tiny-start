@@ -1,18 +1,9 @@
-const { logToConsole, addAnOrA } = require('dwkns-eleventy-plugins')
+const { logToConsole } = require('dwkns-eleventy-plugins')
 
 module.exports = (eleventyConfig) => {
   // utility function to log value to HTML
   // use {{ thingToLog | console | safe }}
-    eleventyConfig.addPlugin(logToConsole);
-   
-   eleventyConfig.addPlugin(addAnOrA);
-
-  
-  // detect changes in the output folder and reload browser
-  eleventyConfig.setBrowserSyncConfig({
-    files: ['dist/**/*'],
-    open: true,
-  });
+  eleventyConfig.addPlugin(logToConsole);
 
   // watch our script folder for changes. 
   eleventyConfig.addWatchTarget("./src/scripts/");
@@ -25,6 +16,13 @@ module.exports = (eleventyConfig) => {
   });
 
   eleventyConfig.setDataDeepMerge(true);
+
+  eleventyConfig.setServerOptions({
+    domdiff: false, // reload instead of domdiff
+    port: 8080,
+    showAllHosts: true, 
+    showVersion: false,
+  });
 
   return {
     dir: {

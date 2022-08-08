@@ -16,7 +16,7 @@ let site = {
     addressCountry: "default_addressCountry"
   },
   theme: {
-   colour: '#317EFB'
+   colour: '#93C5FD'
   },
   twitterURL: "https://twitter.com/yourTwitter",
   linkedInURL: "https://www.linkedin.com/company/yourCompany/",

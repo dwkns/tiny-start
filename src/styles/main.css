@@ -24,8 +24,6 @@
     @apply px-4 mx-auto sm:px-0 sm:w-93%;
   }
 
-
-
   .dwkns-grid {
     @apply grid grid-cols-12 gap-4 sm:gap-8 lg:gap-16;
   }
