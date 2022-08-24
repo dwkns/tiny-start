@@ -12,11 +12,13 @@ sitemap:
 {# Import all components  optional: ignore missing #}
 <section class="dwkns-mt">
   <div class="dwkns-container">
-    <h1  class="text-4xl ">Just a title</h1>
+
     {{ component('simple-block', {
-        title: 'From the Simple Block'
+        title: 'Title using Simple Block component',
+       styles: 'text-5xl font-thin'
       })
     }}
+    <p  class="text-xl ">Just a paragraph</p>
   </div>
 </section>
 <section class="dwkns-mt">
