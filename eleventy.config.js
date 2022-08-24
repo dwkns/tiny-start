@@ -1,9 +1,12 @@
 const { logToConsole } = require('dwkns-eleventy-plugins')
+// const { logToConsole, inlineSVG, htmlMinifer, readableDate, prependAnOrA } = require('../dwkns-eleventy-plugins') // local version
 
 module.exports = (eleventyConfig) => {
-  // utility function to log value to HTML
-  // use {{ thingToLog | console | safe }}
-  eleventyConfig.addPlugin(logToConsole);
+  eleventyConfig.addPlugin(logToConsole, {
+    logToHtml: false,
+    logToConsole: false,
+    colorizeConsole: true,
+  });
 
   // watch our script folder for changes. 
   eleventyConfig.addWatchTarget("./src/scripts/");
