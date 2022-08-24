@@ -23,7 +23,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.setServerOptions({
     domdiff: false, // reload instead of domdiff
     port: 8080,
-    showAllHosts: true, 
+    showAllHosts: false, 
     showVersion: false,
   });
 
