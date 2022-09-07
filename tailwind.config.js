@@ -30,8 +30,6 @@ module.exports = {
         '100%': `${maxWidth}px`,
         '125%': `${maxWidth * 1.25}px`,
       },
-      spacing: {
-      },
       boxShadow: {
         'brand': '0 0 15px rgba(0, 0, 0, 0.15)',
       },
