@@ -1,7 +1,10 @@
 const { logToConsole } = require('dwkns-eleventy-plugins')
 // const { logToConsole, inlineSVG, htmlMinifer, readableDate, prependAnOrA } = require('../dwkns-eleventy-plugins') // local version
-
+const pluginWebc = require("@11ty/eleventy-plugin-webc");
 module.exports = (eleventyConfig) => {
+
+  eleventyConfig.addPlugin(pluginWebc);
+  
   eleventyConfig.addPlugin(logToConsole, {
     logToHtml: false,
     logToConsole: false,
