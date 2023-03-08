@@ -6,7 +6,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginWebc);
   
   eleventyConfig.addPlugin(logToConsole, {
-    logToHtml: false,
+    logToHtml: true,
     logToConsole: false,
     colorizeConsole: true,
   });
