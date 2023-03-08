@@ -3,7 +3,7 @@ const { logToConsole } = require('dwkns-eleventy-plugins')
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(logToConsole, {
-    logToHtml: false,
+    logToHtml: true,
     logToConsole: false,
     colorizeConsole: true,
   });
