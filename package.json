@@ -1,12 +1,11 @@
 {
   "name": "full-start",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
+  "author": "dwkns",
   "dependencies": {
     "@11ty/eleventy": "^2.0.0",
-    "@tailwindcss/forms": "^0.5.2",
-    "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.7",
     "cssnano": "^5.1.7",
     "dotenv": "^16.0.1",
@@ -33,7 +32,7 @@
     "serve": "npm-run-all clean -p build:* serve-static",
     "serve-static": "npx serve dist"
   },
-  "author": "dazza",
+  
   "eslintConfig": {
     "parserOptions": {
       "ecmaVersion": 2021

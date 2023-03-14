@@ -1,10 +1,4 @@
-const {
-  logToConsole,
-  // inlineSVG,
-  // htmlMinifer,
-  // readableDate,
-  // prependAnOrA,
-} = require('dwkns-eleventy-plugins')
+const { logToConsole } = require("dwkns-eleventy-plugins");
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(logToConsole, {
@@ -14,16 +8,13 @@ module.exports = (eleventyConfig) => {
   });
 
   // watch our script folder for changes.
-  eleventyConfig.addWatchTarget("./src/scripts/");
-  eleventyConfig.addWatchTarget("./tailwind.config.js");
+  eleventyConfig.addWatchTarget(["./src/scripts/", "./tailwind.config.js"]);
 
   eleventyConfig.addPassthroughCopy({
     "src/fonts": "./fonts",
     "src/images": "./images",
     "src/styles/compiled.css": "./styles/compiled.css",
   });
-
-  eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.setServerOptions({
     domdiff: false, // reload instead of domdiff
