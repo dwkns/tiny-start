@@ -8,7 +8,8 @@ module.exports = (eleventyConfig) => {
   });
 
   // watch our script folder for changes.
-  eleventyConfig.addWatchTarget(["./src/scripts/", "./tailwind.config.js"]);
+  eleventyConfig.addWatchTarget("./src/scripts/");
+  eleventyConfig.addWatchTarget("./tailwind.config.js");
 
   eleventyConfig.addPassthroughCopy({
     "src/fonts": "./fonts",
