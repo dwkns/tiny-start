@@ -21,7 +21,7 @@
   "scripts": {
     "clean": "rimraf dist build",
     "start": "npm-run-all clean -p dev:* ",
-    "dev": "npm-run-all clean -s dev:* ",
+    "dev": "npm-run-all clean -p dev:* ",
     "dev:postcss": "postcss ./src/styles/main.css -o ./src/styles/compiled.css --watch",
     "dev:esbuild": "esbuild src/scripts/main.js --bundle --watch --outfile=dist/scripts/main.js",
     "dev:eleventy": "eleventy --serve --quiet",
