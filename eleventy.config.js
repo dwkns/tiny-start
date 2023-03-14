@@ -7,7 +7,7 @@ module.exports = (eleventyConfig) => {
     colorizeConsole: true,
   });
 
-  // watch our script folder for changes.
+  // watch our script folder & tailwind config for changes.
   eleventyConfig.addWatchTarget("./src/scripts/");
   eleventyConfig.addWatchTarget("./tailwind.config.js");
 
