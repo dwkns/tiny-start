@@ -13,9 +13,3 @@
 }
 
 @tailwind utilities;
-
-:root {
-  --brand: rgb(11, 134, 235);
-  --brand-alt: rgb(23, 161, 23);
-}
-
