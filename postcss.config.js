@@ -3,7 +3,6 @@ const tailwindcss = require('tailwindcss')
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
 const site  = require('./src/_data/site.js') // import our site data
-
 let minifyCSS = false
 
 // Look for the CURRENT_ENV enviroment variable and warn if it's not there.

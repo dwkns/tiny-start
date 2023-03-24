@@ -1,4 +1,16 @@
 const { logToConsole } = require("dwkns-eleventy-plugins");
+const site = require("./src/_data/site.js"); // import our site data
+
+// check if the CURRENT_ENV variable is set. If not, log a warning to the console.
+if (!site.currentEnv) {
+  brightRed = "\x1b[31m";
+  reset = "\x1b[0m";
+  console.log(`${brightRed}
+The ${reset}CURRENT_ENV ${brightRed}enviroment variable is not set. Things may not work as expected. 
+Check your enviroment variables or ${reset}.env ${brightRed}file. See ${reset}.env-template ${brightRed}for details${reset}
+`);
+} 
+
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(logToConsole, {
