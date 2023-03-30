@@ -37,6 +37,7 @@ module.exports = (eleventyConfig) => {
   });
 
   return {
+    // markdownTemplateEngine: "njk", // use nunjucks for markdown files (default is liquid)
     dir: {
       input: "src",
       output: "dist",
